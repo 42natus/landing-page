@@ -8,6 +8,22 @@ body {
     padding: 0;
 }
 
+.wrapper,
+.hero-text,
+.info-section,
+.info,
+blockquote {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section,
+.info-section,
+.quote-section,
+.cta-section {
+    flex: 1;
+}
+
 .hero-section, footer {
     background-color: #1F2937;
 }
@@ -15,8 +31,9 @@ body {
 header,
 .hero-content,
 .info-section,
+.info-boxes,
 .cta-container {
-    width: 70%;
+    width: 60%;
     margin: auto;
 }
 
@@ -26,6 +43,10 @@ header,
 .cta-container {
     display: flex;
     justify-content: space-between;
+}
+
+.hero-content {
+    flex-wrap: wrap;
 }
 
 header {
@@ -38,6 +59,7 @@ header {
     font-size: 24px;
     color: #F9FAF8;
     font-weight: bold;
+    margin-right: 20px;
 }
 
 ul {
@@ -54,11 +76,6 @@ a {
 
 .hero-content {
     padding-bottom: 100px;
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
 }
 
 .hero-image {
@@ -97,6 +114,7 @@ button {
     border-radius: 8px;
     width: 125px;
     margin-top: 12px;
+    margin-bottom: 24px;
     padding: 10px;
 }
 
@@ -113,9 +131,8 @@ button {
 }
 
 .info-boxes {
-    width: 55%;
-    margin: auto;
-    margin-top: 48px;
+    margin-top: 18px;
+    flex-wrap: wrap;
 }
 
 .box {
@@ -126,8 +143,6 @@ button {
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 8px;
     max-width: 150px;
@@ -136,6 +151,7 @@ button {
 .text {
     text-align: center;
     color: #58595a;
+    padding-bottom: 20px;
 }
 
 .quote-section {
@@ -143,11 +159,10 @@ button {
     padding: 100px;
 }
 
-.quote-container {
-    display: flex;
+blockquote {
     justify-content: center;
     align-items: center;
-    width: 900px;
+    width: 48%;
     margin: auto;
 }
 
@@ -156,6 +171,7 @@ blockquote > p {
     font-weight: 100;
     font-style: italic;
     color: #1F2937;
+    margin: 0;
 }
 
 blockquote > cite {
@@ -166,7 +182,6 @@ blockquote > cite {
     display: block;
     width: 95%;
     text-align: end;
-    margin-top: -32px;
 }
 
 .cta-section {
@@ -177,12 +192,14 @@ blockquote > cite {
     padding: 50px 120px;
     border-radius: 8px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .cta-container > button {
     border: 2px solid white;
     padding: 10px;
     width: 125px;
+    margin: 0;
 }
 
 .cta h3 {
@@ -191,7 +208,7 @@ blockquote > cite {
 }
 
 .cta > p {
-    margin: 5px 0 0 0;
+    margin: 0 0 5px 0;
     padding: 0;
     font-size: 18px;
     font-weight: 100;
